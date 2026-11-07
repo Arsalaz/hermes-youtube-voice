@@ -1,0 +1,6 @@
+numpy>=1.24.0
+soundfile>=0.12.1
+edge-tts>=6.1.10
+# Not: torch ve ema-lightning CPU-only linkiyle kurulmalidir:
+# pip install torch --index-url https://download.pytorch.org/whl/cpu
+# pip install ema-lightning --extra-index-url https://download.pytorch.org/whl/cpu

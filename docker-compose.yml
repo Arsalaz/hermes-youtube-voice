@@ -1,0 +1,20 @@
+services:
+  hermes-voice:
+    build: .
+    image: hermes-voice:0.1
+    container_name: hermes-voice
+    entrypoint: ["sleep", "infinity"]
+    cpus: "1.0"
+    mem_limit: 2g
+    memswap_limit: 3g
+    pids_limit: 256
+    environment:
+      HV_THREADS: "1"
+      HV_RSS_LIMIT_MB: "1600"
+      HV_DATA: /data
+    volumes:
+      - hv_data:/data
+    restart: unless-stopped
+
+volumes:
+  hv_data:
